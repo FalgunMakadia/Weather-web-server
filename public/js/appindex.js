@@ -1,5 +1,3 @@
-console.log('appindex.js file is being loaded.')
-
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
 const messageOne = document.querySelector('#m1')
