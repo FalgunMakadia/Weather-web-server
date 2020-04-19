@@ -12,7 +12,7 @@ weatherForm.addEventListener('submit' ,(e) => {
         return (messageOne.textContent = 'Error : Location is not provided!') && (messageTwo.textContent = 'Please enter a Location.') && (messageThree.textContent = '')
     }
     messageOne.textContent = 'Loading...'
-    const searchStr = 'http://localhost:3000/weather?location='+encodeURIComponent(location)
+    const searchStr = '/weather?location='+encodeURIComponent(location)
 
     fetch(searchStr).then((response) => {
         response.json().then((data) => {

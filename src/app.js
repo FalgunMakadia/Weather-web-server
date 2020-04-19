@@ -5,6 +5,7 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 // Define paths for Express config
 const pathToPublic = path.join(__dirname, '../public')
@@ -103,23 +104,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('Port id up on port 3000')
+app.listen(port, () => {
+    console.log('Port id up on port '+port)
 })
-
-
-// It will not be called ever ..instead of this, index.html will be called >>>
-// app.get('', (req, res) => {
-//     res.send('<h1>Weather application using Express</h1>')
-// })
-
-// app.get('/help', (req, res) => {
-//     res.send({
-//         helper_name: 'Falgun Makadia',
-//         contact: 9825021498
-//     })
-// })
-
-// app.get('/about', (req, res) => {
-//     res.send('<h1>About this weather application</h1>')
-// })
